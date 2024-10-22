@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Popup Massage Project</title>
+  </head>
+  <body>
+    <div id="hidden">
+        <h4>Lorem ipsum dolor sit amet</h4>
+        <button type="submit" onclick="hide()">submit</button>
+    </div>
+
+    <div class="container">
+      <div class="First">
+        <h4>Your First Name :</h4>
+        <input type="text" placeholder="First Name" required />
+      </div>
+
+      <div class="second">
+        <h4>Your last Name :</h4>
+        <input type="text" placeholder="Last Name" required />
+      </div>
+
+      <div class="third">
+        <h4>Email :</h4>
+        <input type="email" placeholder="Email" required />
+      </div>
+      <br />
+      <button type="button" onclick="popup()" >Save</button>
+    </div>
+    <script>
+      function popup() {
+        alert("Sure");
+        document.getElementById('hidden').style.transform = "scale(1)";
+        document.getElementById('hidden').style.visibility = "visible";
+        document.getElementById('hidden').style.marginTop = "50px";
+      }
+      function hide() {
+        document.getElementById('hidden').style.transform = "scale(0.01)";
+        document.getElementById('hidden').style.visibility = "hidden";
+        document.getElementById('hidden').style.marginTop = "-60px";
+      }
+    </script>
+  </body>
+</html>
